@@ -21,7 +21,7 @@ CONFIG_PATH = os.path.join(xdg.BaseDirectory.xdg_data_home, 'tts', 'conf.json')
 # integrate custom config
 _custom_config = {}
 if os.path.exists(CONFIG_PATH):
-    with open(CONFIG_PATH, 'f', encoding="utf-8") as config:
+    with open(CONFIG_PATH, 'r', encoding="utf-8") as config:
         _custom_config = json.load(config)
 
 def create_argparser():
